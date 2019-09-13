@@ -44,28 +44,33 @@
       </div>
       </nav>
 
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-      <a href="img/meghan_markle.jpg"><img src="img/meghan_markle.jpg" height=150px alt="Picture of Meghan Markle" title="Meghan Stark: Source - Cosmopolitan.com"></a>
-      <p>Source: Cosmopolitan, 2019</p>
-      </div>
 
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 information">
-        <h3>Name: Meghan Stark</h3>
-        <h3>Country of Origin: Australia</h3>
-        <h4>Birthdate: 12 May 1994</h4>
-        <h4>Age: 25</h4>
-        <h4>Favourite show: Suits</h4>
-        <h4>Write an email to me <a href="mailto:example_email_id@example.com">here</a></h4>
-      </div>
+<div class="row">
+  <div id = "aboutMeProfile" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <div class="aboutMe">
 
+      <img :src='users.results[0].picture.medium'>
+      <div class = "firstname"><strong>First Name:</strong> {{users.results[0].name.first}}</div>
+      <div class = "lastname"><strong>Last Name:</strong> {{users.results[0].name.last}}</div>
+      <div class = "country"><strong>Country:</strong> {{users.results[0].location.timezone.description}}</div>
+      <div class = "birthdate"><strong>Birthdate: </strong>{{users.results[0].dob.date}}</div>
+      <div class = "age"><strong>Age:</strong> {{users.results[0].dob.age}}</div>
+      <div class = "email"><strong>Write an email to me<a :href="'mailto:${{users.results[0].email}}'"> here</a></strong></a>
+
+      <div class="gender"><strong>Gender: </strong>{{users.results[0].gender}}</div>
+
+
+
+    </div>
+    </div>
 </div>
-<footer>
-  <center><p>Owned by Simran Shah</p></center>
-</footer>
 
 
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/user_generator.js"></script>
 
 </body>
 </html>
