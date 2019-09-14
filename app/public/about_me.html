@@ -47,7 +47,7 @@
 
 <div class="row">
   <div id = "aboutMeProfile" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-    <div class="aboutMe">
+    <div class="aboutMe" v-if="users.results">
 
       <img :src='users.results[0].picture.medium'>
       <div class = "firstname"><strong>First Name:</strong> {{users.results[0].name.first}}</div>
