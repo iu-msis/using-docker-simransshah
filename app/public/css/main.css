@@ -2,6 +2,7 @@ body {
   background-color: lightblue;
   color: black;
   font-family: sans-serif;
+  font-size: 20px;
 }
 
 .nav, .navbar-nav {
