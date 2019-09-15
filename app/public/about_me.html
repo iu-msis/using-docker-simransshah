@@ -56,7 +56,7 @@
   <div id = "aboutMeProfile">
     <div class="aboutMe" v-if="users.results">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-      <img :src='users.results[0].picture.large'>
+      <img :src='users.results[0].picture.large' alt="Profile Picture" title="Profile Picture">
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
     <table>
@@ -88,7 +88,7 @@
       <tr>
       <div class = "email">
         <td><strong>Write an email to me</strong></td>
-        <td><a :href="'mailto:${{users.results[0].email}}'"> here</a></a></div>
+        <td><a :href="'mailto:${{users.results[0].email}}'"> {{users.results[0].email}}</a></a></div>
         </td>
       </tr>
       <tr>
