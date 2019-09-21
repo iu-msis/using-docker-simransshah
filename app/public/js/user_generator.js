@@ -12,7 +12,6 @@ methods :{
        .then(function(json) {aboutMe.users = json});
 
     //.catch(/*function goes here*/)
-
     //promise object is created. fetch works asynchronously
   }
 },
